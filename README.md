@@ -1,4 +1,4 @@
- First, copy the contents of the db file to your SQL Server database folder.
+ Firstly, copy the contents of the db file to your SQL Server database folder.
  
 Then open the project, and in it the Web.config file. Fing line 60, here you will se conection.
 
