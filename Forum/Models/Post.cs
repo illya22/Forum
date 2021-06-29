@@ -16,24 +16,16 @@ namespace Forum.Models
     public partial class Post
     {
         public int Id_post { get; set; }
-        [Required(ErrorMessage = "Put the data in the field")]
-        [Display(Name = "Topic")]
         public Nullable<int> Topic_id { get; set; }
         public Nullable<int> User_id { get; set; }
-
         [Required(ErrorMessage = "Put the data in the field")]
         [Display(Name = "User name")]
         public string User_name { get; set; }
         [Required(ErrorMessage = "Put the data in the field")]
         [Display(Name = "Text")]
-        [DataType(DataType.MultilineText)]
         public string Post_text { get; set; }
-        [Required(ErrorMessage = "Put the data in the field")]
-        [Display(Name = "Data")]
-        [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd HH:mm:ss}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> Post_date { get; set; }
-
+    
         public virtual Topic Topic { get; set; }
         public virtual Users Users { get; set; }
     }

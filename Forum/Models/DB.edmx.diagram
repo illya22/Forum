@@ -7,7 +7,7 @@
       <Diagram DiagramId="672a45a2ea4547c29552b3ab5bc66938" Name="Diagram1">
         <EntityTypeShape EntityType="ForumDBModel.Post" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="ForumDBModel.Topic" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ForumDBModel.Users" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ForumDBModel.Users" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
         <AssociationConnector Association="ForumDBModel.FK_Post_Topic" ManuallyRouted="false" />
         <AssociationConnector Association="ForumDBModel.FK_Post_Users" ManuallyRouted="false" />
       </Diagram>

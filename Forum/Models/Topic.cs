@@ -12,6 +12,7 @@ namespace Forum.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+
     public partial class Topic
     {
         public int Id_topic { get; set; }
@@ -21,6 +22,7 @@ namespace Forum.Models
         [Required(ErrorMessage = "Put the data in the field")]
         [Display(Name = "Description")]
         public string Description { get; set; }
+    
 
         public virtual Post Post { get; set; }
     }
