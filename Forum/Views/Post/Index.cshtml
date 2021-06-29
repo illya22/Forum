@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Forum.Models.Post>
+
+@{
+    ViewBag.Title = "Posts";
+    Layout = "~/Views/Shared/_ForumLayout.cshtml";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>Posts List</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped table-condensed table-bordered">
+            <tr>
+                <th class="text-right">Category</th>
+                <th>Post text</th>
+                <th>User name</th>
+                <th>Post date</th>
+                <th>Delete post</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="text-right">@item.Topic_id</td>
+                    <td>@Html.ActionLink(item.Post_text, "Edit", new { id = item.Id_post })</td>
+                    <td>@item.User_name</td>
+                    <td>@item.Post_date</td>
+                    <td class="text-center">
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id_post })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="panel-footer">
+        @Html.ActionLink("Create New", "Create", null,
+        new { @class = "btn btn-default"})
+    </div>
+</div>

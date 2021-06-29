@@ -1,0 +1,15 @@
+﻿@model Forum.Models.Topic
+
+<div class="well">
+    <h3>
+        <strong>@Model.Category</strong>
+
+        <span class="pull-right ">
+            @Html.ActionLink("Delete", "Delete", new { id = Model.Id_topic })
+        </span>
+        <span class="pull-right ">
+            @Html.ActionLink("View posts", "Index", "Post", null, new { @class = "btn btn-default" })
+        </span>
+    </h3>
+    <span class="lead">@Model.Description</span>
+</div>

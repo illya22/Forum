@@ -1,0 +1,22 @@
+﻿@using Forum.Models
+@using Forum.HtmlHelpers
+@model ListViewModel
+
+@{
+    ViewBag.Title = "Topics";
+}
+
+@foreach (var p in Model.Topics)
+{
+    @Html.Partial("TopicSummary", p)
+}
+
+
+<div class="btn-group pull-right">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List",
+    new { page = x, category = Model.CurrentCategory }))
+</div>
+
+<div>
+    @Html.ActionLink("Add Topic", "Create_Topic", null, new { @class = "btn btn-default" })
+</div>
